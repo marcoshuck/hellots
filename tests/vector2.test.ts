@@ -45,6 +45,30 @@ test('Should add two different vectors and return the result', () => {
 
   expect(result).toBeDefined();
   expect(result).toBeInstanceOf(Vector2);
-  expect(result).toHaveProperty('x', 5);
-  expect(result).toHaveProperty('y', 6);
+  expect(result).toHaveProperty('x', 2 + 3);
+  expect(result).toHaveProperty('y', 5 + 1);
+});
+
+test('Should add two different vectors and the result should be the same for both A and B', () => {
+  const vectorA: Vector2 = new Vector2(2, 5);
+  const vectorB: Vector2 = new Vector2(3, 1);
+  const resultFromA: Vector2 = vectorA.add(vectorB);
+  const resultFromB: Vector2 = vectorB.add(vectorA);
+  expect(resultFromA).toEqual(resultFromB);
+});
+
+// tslint:disable-next-line: max-line-length
+test('Should multiply a vector with a number and the result should be another vector scaled by that number', () => {
+  const vector: Vector2 = new Vector2(2, 5);
+  const c: number = 2;
+  const result: Vector2 = vector.scale(c);
+  expect(result).toHaveProperty('x', 4);
+  expect(result).toHaveProperty('y', 10);
+});
+
+test('Should multiply two vectors and the result must be a number', () => {
+  const vectorA: Vector2 = new Vector2(2, 5);
+  const vectorB: Vector2 = new Vector2(3, 1);
+  const result: number = vectorA.dot(vectorB);
+  expect(result).toBe((2 * 1) - (3 * 5));
 });
