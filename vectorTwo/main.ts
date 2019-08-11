@@ -1,4 +1,4 @@
-import { Vector2 } from "./vector2";
+import { Vector2 } from './vector2';
 
 const vectorA: Vector2 = new Vector2(5, 2);
 const vectorB: Vector2 = new Vector2(-3, 4);
