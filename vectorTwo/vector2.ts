@@ -1,4 +1,5 @@
 export class Vector2 {
+
     private _x: number;
     private _y: number;
 
