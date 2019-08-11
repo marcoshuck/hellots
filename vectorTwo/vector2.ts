@@ -1,6 +1,9 @@
 export class Vector2 {
 
+  // tslint:disable-next-line: variable-name
   private _x: number;
+
+  // tslint:disable-next-line: variable-name
   private _y: number;
 
   get x(): number {
@@ -28,7 +31,7 @@ export class Vector2 {
     this._x = x;
     this._y = y;
   }
-  
+
   add(vector: Vector2): Vector2 {
     return new Vector2(
       this.x + vector.x,
