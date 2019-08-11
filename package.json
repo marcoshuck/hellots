@@ -1,0 +1,31 @@
+{
+  "name": "hellots",
+  "version": "1.0.0",
+  "description": "A Typescript repository for development and testing purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoshuck/hellots.git"
+  },
+  "keywords": [
+    "Typescript",
+    "development",
+    "test",
+    "testing",
+    "unit",
+    "integration"
+  ],
+  "author": "Marcos Huck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcoshuck/hellots/issues"
+  },
+  "homepage": "https://github.com/marcoshuck/hellots#readme",
+  "dependencies": {
+    "@types/jest": "^24.0.17",
+    "jest": "^24.8.0"
+  }
+}
