@@ -1,10 +1,11 @@
 import { Vector2 } from './vector2';
+import { JL } from 'jsnlog';
 
 const vectorA: Vector2 = new Vector2(5, 2);
 const vectorB: Vector2 = new Vector2(-3, 4);
 
-console.log('Vector A', vectorA);
+JL('Vector2').info(`Vector A: ${JSON.stringify(vectorA)}`);
 
-console.log('Vector B', vectorB);
+JL('Vector2').info(`Vector B: ${JSON.stringify(vectorB)}`);
 
-console.log('A.B =', vectorA.dot(vectorB));
+JL('Vector2').info(`A.B = ${JSON.stringify(vectorA.dot(vectorB))}`);
