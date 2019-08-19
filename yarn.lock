@@ -369,6 +369,13 @@
   dependencies:
     "@types/jest-diff" "*"
 
+"@types/jsnlog@^2.17.2":
+  version "2.17.2"
+  resolved "https://registry.yarnpkg.com/@types/jsnlog/-/jsnlog-2.17.2.tgz#32d1d57aebe23873001b49140001bfaa1984d133"
+  integrity sha1-MtHVeuviOHMAG0kUAAG/qhmE0TM=
+  dependencies:
+    jsnlog "*"
+
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
@@ -2122,6 +2129,11 @@ jsesc@^2.5.1:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-2.5.2.tgz#80564d2e483dacf6e8ef209650a67df3f0c283a4"
   integrity sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==
+
+jsnlog@*, jsnlog@^2.29.0:
+  version "2.29.0"
+  resolved "https://registry.yarnpkg.com/jsnlog/-/jsnlog-2.29.0.tgz#5042453d7c4943cdfba0f8872a57c2abbb5316b0"
+  integrity sha512-cRX9dAFlbohODpsHS63Zp8yBfHMseS1ERoO8FPGljapqFtjIfPsU/581S8YD6LNFKUhLAynM/iMPFujamG/fHA==
 
 json-parse-better-errors@^1.0.1:
   version "1.0.2"
