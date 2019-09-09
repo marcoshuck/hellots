@@ -1,48 +1,37 @@
-export function quickSort(
-    array: number[],
-    begin: number = 0,
-    end: number = array.length - 1,
-  ): void {
+export function quickSort(array: number[], from: number, to: number): void {
+  const pivot: number = array[to];
+  let left: number = from - 1;
+  let right: number = to;
 
-  if (end - begin <= 0) {
+  if (from > to) {
     return;
   }
 
-  const pivot: number = array[end];
+  left = getPortion(array, left, right, pivot);
 
-  const partition: number = calculatePartition(array, begin, end, pivot);
+  swap(array, left, to);
 
-  quickSort(array, begin, partition - 1);
-  quickSort(array, partition + 1, end);
+  quickSort(array, from, left - 1);
+  quickSort(array, left + 1, to);
 }
 
-function calculatePartition(array: number[], left: number, right: number, pivot: number) {
-  let low: number = left;
-  let high: number = right - 1;
+function getPortion(array: number[], left: number, right: number, pivot: number): number {
   let flag: boolean = false;
+  while (!flag) {
+    while (array[++left] < pivot);
+    while (array[--right] > pivot);
 
-  if (left >= right) {
-    return low;
-  }
+    if (left < right) {
+      swap(array, left, right);
+    }
 
-  do {
-    for (low = left; pivot > array[low]; low++);
-    for (high = right - 1; pivot < array[high]; high--);
-
-    if (low > high) {
+    if (left >= right) {
       flag = true;
     }
-
-    if (low < high) {
-      swap(array, low, high);
-    }
-
-    swap(array, low, right);
-  } while (!flag);
-
-  return low;
+  }
+  return left;
 }
 
-function swap(array: number[], i: number, j: number): void {
-  [array[i], array[j]] = [array[j], array[i]];
+function swap(array: number[], from: number, to: number) {
+  [array[from], array[to]] = [array[to], array[from]];
 }

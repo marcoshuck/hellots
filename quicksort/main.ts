@@ -1,10 +1,10 @@
 import { quickSort } from './quicksort';
 
 function main() {
-  const unsortedArray: number[] = [1, 9, 5, 3, 6, 8, 2, 25, 72, 45, 33, 4];
+  const unsortedArray: number[] = Array.from({ length: 20 }, () => Math.floor(Math.random() * 20));
   const sortedArray: number[] = [...unsortedArray];
   console.table({ unsortedArray });
-  quickSort(sortedArray);
+  quickSort(sortedArray, 0, unsortedArray.length - 1);
   console.table({ sortedArray });
 }
 
