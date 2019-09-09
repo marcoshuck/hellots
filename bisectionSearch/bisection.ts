@@ -9,16 +9,15 @@ export async function bisectionSearch(array: number[], search: number): Promise<
 
     if (array[middle] === search) {
       position = middle;
-    } else if (array[middle] > search) {
+    }
+
+    if (array[middle] > search) {
       right = middle - 1;
-    } else {
+    }
+
+    if (array[middle] < search) {
       left = middle + 1;
     }
-    console.table({
-      left,
-      middle,
-      right,
-    });
   }
   return position;
 }
