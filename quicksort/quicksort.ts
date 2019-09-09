@@ -1,32 +1,45 @@
-export function quickSort(array: number[], begin: number = 0, end: number = array.length - 1): number[] {
+export function quickSort(
+    array: number[],
+    begin: number = 0,
+    end: number = array.length - 1,
+  ): void {
+
   if (end - begin <= 0) {
-    return array;
+    return;
   }
+
   const pivot: number = array[end];
 
   const partition: number = calculatePartition(array, begin, end, pivot);
 
   quickSort(array, begin, partition - 1);
   quickSort(array, partition + 1, end);
-
-  return array;
 }
 
 function calculatePartition(array: number[], left: number, right: number, pivot: number) {
   let low: number = left;
   let high: number = right - 1;
-  while (true) {
-    while (array[++low] < pivot);
+  let flag: boolean = false;
 
-    while (array[--high] > pivot);
+  if (left >= right) {
+    return low;
+  }
 
-    if (low >= high) {
-      break;
+  do {
+    for (low = left; pivot > array[low]; low++);
+    for (high = right - 1; pivot < array[high]; high--);
+
+    if (low > high) {
+      flag = true;
     }
 
-    swap(array, high, low);
-  }
-  swap(array, low, right);
+    if (low < high) {
+      swap(array, low, high);
+    }
+
+    swap(array, low, right);
+  } while (!flag);
+
   return low;
 }
 
