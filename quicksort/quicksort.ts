@@ -1,7 +1,7 @@
 export function quickSort(array: number[], from: number, to: number): void {
   const pivot: number = array[to];
   let left: number = from - 1;
-  let right: number = to;
+  const right: number = to;
 
   if (from > to) {
     return;
