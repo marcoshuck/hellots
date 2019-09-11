@@ -1,7 +1,7 @@
 /**
  * Función fizzBuzz dinamica que recibe el numero y las condiciones a evaluar
  * @param n Valor numérico a evaluar
- * @param maps Map que relacion una función condicional con su respectivo key
+ * @param maps Map que relaciona una función condicional con su respectivo key
  */
 function fizzBuzz(n: number, maps: Map<string, Function>): string {
   let key: string;
