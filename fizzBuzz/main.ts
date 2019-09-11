@@ -2,6 +2,7 @@
  * Función fizzBuzz dinamica que recibe el numero y las condiciones a evaluar
  * @param n Valor numérico a evaluar
  * @param maps Map que relaciona una función condicional con su respectivo key
+ * @return Devuelve la cadena respectiva a la key de la condicion satisfactoria
  */
 function fizzBuzz(n: number, maps: Map<string, Function>): string {
   let key: string;
